@@ -1,6 +1,19 @@
 # Nuxt Extension Changelog
 
-## [Nuxt Modules Features] - 2025-05-07
+## [2.0.0] - Nuxt UI v4 Upgrade - {PR_MERGE_DATE}
+
+Major Changes
+
+- **Breaking**: Upgraded to Nuxt UI v4 with comprehensive component library updates
+- **Enhanced**: Merged Nuxt UI Pro components into the main package for unified access
+- **Improved**: Updated component documentation and examples to reflect v4 API changes
+
+✨ New Features
+
+- Unified component library with previously Pro-only components now available
+- New `Get Nuxt Documentation` tool to search and browse Nuxt documentation
+
+## [Nuxt Modules Features] - {PR_MERGE_DATE}
 
 - Renamed from "Nuxt UI for Raycast" to "Nuxt for Raycast" to reflect broader scope
 - Added new module-related features:
@@ -12,7 +25,7 @@
   - Enhanced `Get Component Theme` tool
   - Maintained `Get Component Source Code` functionality
 
-## [Initial Version] - 2025-03-02
+## [Initial Version] - {PR_MERGE_DATE}
 
 - Added the initial version of Nuxt UI for Raycast with the following commands:
   - `Search Component Theme` instantly opens the component theme based on the selected component name (or input)
