@@ -1,6 +1,6 @@
 # Nuxt Extension Changelog
 
-## [2.0.0] - Nuxt UI v4 Upgrade - {PR_MERGE_DATE}
+## [2.0.0] - Nuxt UI v4 Upgrade - 2025-09-24
 
 Major Changes
 
