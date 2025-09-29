@@ -1,6 +1,6 @@
 # Nuxt Extension Changelog
 
-## [2.0.1] - {PR_MERGE_DATE}
+## [2.0.1] - 2025-09-29
 
 🐛 Bug Fixes
 
