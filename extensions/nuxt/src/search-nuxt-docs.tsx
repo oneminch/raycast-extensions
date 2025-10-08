@@ -88,7 +88,7 @@ export default function Command() {
                   />
                   <Action.OpenInBrowser title="Open at Nuxt.com" url={`${getNuxtDocsUrl()}${item.path}`} />
                   <Action
-                    title="Copy Markdown"
+                    title="Copy Page Markdown"
                     icon={Icon.Clipboard}
                     shortcut={{ modifiers: ["cmd"], key: "." }}
                     onAction={async () => {

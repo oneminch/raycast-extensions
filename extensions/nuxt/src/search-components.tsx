@@ -72,7 +72,7 @@ export default function Command() {
                   }}
                 />
                 <Action
-                  title="Copy Markdown"
+                  title="Copy Component Markdown"
                   icon={Icon.Clipboard}
                   shortcut={{ modifiers: ["cmd"], key: "." }}
                   onAction={async () => {
@@ -134,7 +134,7 @@ export default function Command() {
                   }}
                 />
                 <Action
-                  title="Copy Markdown"
+                  title="Copy Component Markdown"
                   icon={Icon.Clipboard}
                   shortcut={{ modifiers: ["cmd"], key: "." }}
                   onAction={async () => {
