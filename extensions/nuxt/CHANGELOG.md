@@ -1,5 +1,17 @@
 # Nuxt Extension Changelog
 
+## [2.1.0] - {PR_MERGE_DATE}
+
+✨ New Features
+
+- **Added**: Copy Page Markdown action - Right-click on any documentation page to copy its raw markdown source (Cmd+.)
+- **Added**: Copy Component Markdown action - Right-click on any component to copy its documentation markdown source (Cmd+.)
+
+🚀 Improvements
+
+- **Platform**: Added Windows support
+- **Refactored**: Extracted shared markdown fetching utilities for better code maintainability
+
 ## [2.0.1] - 2025-09-29
 
 🐛 Bug Fixes
