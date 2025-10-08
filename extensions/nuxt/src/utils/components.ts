@@ -1,5 +1,6 @@
 import { Icon, open, showToast, Toast, getPreferenceValues } from "@raycast/api";
 import { showFailureToast } from "@raycast/utils";
+import { $fetch } from "ofetch";
 import { camelCase, kebabCase, pascalCase } from "scule";
 import type { ComponentInfo, ComponentContext } from "../types/components";
 import { getDocsUrl } from "./search";
@@ -317,4 +318,19 @@ export async function openDocumentation(component: ComponentItem, showTheme: boo
   } catch (error) {
     await showFailureToast(error, { title: "Failed to open documentation" });
   }
+}
+
+/**
+ * Fetch the raw markdown content of a Nuxt UI component documentation
+ */
+export async function fetchComponentMarkdown(componentName: string): Promise<string> {
+  const { prefix } = getPreferenceValues();
+  const sanitizedComponentName = sanitizeComponentName(componentName, prefix ?? "U");
+  const url = getDocsUrl().replace("/docs", "/raw/docs/components");
+  return await $fetch<string>(`${url}/${sanitizedComponentName}.md`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  });
 }
