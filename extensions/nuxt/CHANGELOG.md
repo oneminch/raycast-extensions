@@ -4,12 +4,21 @@
 
 ✨ New Features
 
+- **Added**: Nuxt Dev Server Monitor - Menu bar indicator that detects running Nuxt development servers
+  - Real-time detection of running Nuxt/Nitro processes on ports 3000-3010
+  - Displays project name from package.json instead of port number
+  - Shows project info: version, port, memory usage, CPU usage
+  - Quick actions: Open in browser, Open GitHub repo, Stop server...
+  - Direct shortcuts to Nuxt documentation, components, and modules search
+  - Automatically refreshes every 30 seconds
+  - Shows server count in menu bar
 - **Added**: Copy Page Markdown action - Right-click on any documentation page to copy its raw markdown source (Cmd+.)
 - **Added**: Copy Component Markdown action - Right-click on any component to copy its documentation markdown source (Cmd+.)
 
 🚀 Improvements
 
 - **Platform**: Added Windows support
+- **Simplified**: Removed URL configuration preferences - now uses Nuxt UI v4 and Nuxt 4.x by default
 - **Refactored**: Extracted shared markdown fetching utilities for better code maintainability
 
 ## [2.0.1] - 2025-09-29

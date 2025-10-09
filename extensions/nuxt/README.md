@@ -55,9 +55,8 @@ Access Nuxt UI documentation and tools instantly:
 ### ⚙️ Smart Configuration
 Customize to match your workflow (Preferences in Raycast):
 - `Prefix` for component names (default: `U`)
-- `Docs URL` for Nuxt UI (default: `https://ui.nuxt.com`)
-- `Nuxt Docs Url` for framework docs (default: `https://nuxt.com/docs/4.x`)
-- `UI Branch` for fetching themes from GitHub (default: `main`)
+
+The extension is pre-configured to work with Nuxt UI v4 and Nuxt 4.x documentation.
 
 ## 🎬 See It In Action
 
