@@ -6,7 +6,6 @@ import type { ComponentInfo, ComponentContext } from "../types/components";
 import { getDocsUrl } from "./search";
 import { showAnimatedToast, showSuccessToast } from "./commands";
 
-// Component catalogs
 export const components = [
   "app",
   "accordion",

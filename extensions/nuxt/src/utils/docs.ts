@@ -23,7 +23,6 @@ export function flattenDocsTree(tree: NuxtDocsNode[]): NuxtDocsLink[] {
   return flat;
 }
 
-// Fetch the raw markdown content of a Nuxt documentation page
 export async function fetchNuxtDocMarkdown(path: string): Promise<string> {
   const base = getNuxtDocsUrl();
   const normalized = path.replace(/\/(index)?$/, "");

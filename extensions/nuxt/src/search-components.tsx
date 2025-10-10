@@ -20,10 +20,8 @@ export default function Command() {
     return comps;
   });
 
-  // Filter components based on search text
   const filteredComponents = useMemo(() => filterComponents(components, searchText, null), [components, searchText]);
 
-  // Split into sections and sort alphabetically within each
   const baseComponents = useMemo(
     () => sortComponentsByName(filteredComponents.filter((c) => c.type === "base")),
     [filteredComponents],

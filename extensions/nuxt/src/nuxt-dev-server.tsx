@@ -202,7 +202,6 @@ export default function Command() {
           pid,
           port,
           command,
-          // Details will be filled by useEffect
           cwd: undefined,
           projectInfo: undefined,
           memory: undefined,
@@ -241,9 +240,7 @@ export default function Command() {
       }
     }
 
-    if (!needsUpdate) {
-      return;
-    }
+    if (!needsUpdate) return;
 
     const newDetails = new Map<string, ReturnType<typeof getProjectInfo>>();
 
