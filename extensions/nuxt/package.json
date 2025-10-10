@@ -44,6 +44,12 @@
       "mode": "view"
     },
     {
+      "name": "quick-create",
+      "title": "Quick Create",
+      "description": "Create Nuxt files from templates (components, pages, API routes, layouts, composables)",
+      "mode": "view"
+    },
+    {
       "name": "nuxt-dev-server",
       "title": "Nuxt Dev Server",
       "description": "Monitor and control running Nuxt development servers",
