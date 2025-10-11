@@ -4,13 +4,7 @@
 
 import { NUXT_PROCESS_KEYWORDS } from "../constants/config";
 import type { ProjectInfo } from "./system";
-import {
-  extractCwdFromCommand,
-  getCwdFromLsof,
-  readPackageJson,
-  readGitConfig,
-  getProcessStats,
-} from "./system";
+import { extractCwdFromCommand, getCwdFromLsof, readPackageJson, readGitConfig, getProcessStats } from "./system";
 
 /**
  * Complete information about a detected Nuxt process
@@ -92,7 +86,10 @@ export function parseNuxtProcesses(lsofData: string, psData: string | undefined)
     return processes;
   }
 
-  const lsofLines = lsofData.trim().split("\n").filter((l) => l.trim());
+  const lsofLines = lsofData
+    .trim()
+    .split("\n")
+    .filter((l) => l.trim());
 
   for (const line of lsofLines) {
     const parsed = parseLsofLine(line);

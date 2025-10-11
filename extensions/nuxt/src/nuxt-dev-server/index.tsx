@@ -40,12 +40,7 @@ export default function Command() {
               const projectName = enrichedProcess.projectInfo?.name || `Port ${port}`;
 
               return (
-                <ServerSubmenu
-                  key={port}
-                  process={enrichedProcess}
-                  projectName={projectName}
-                  revalidate={revalidate}
-                />
+                <ServerSubmenu key={port} process={enrichedProcess} projectName={projectName} revalidate={revalidate} />
               );
             })}
           </MenuBarExtra.Section>

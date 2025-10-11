@@ -90,10 +90,7 @@ export function useNuxtProcesses() {
 /**
  * Merge process with its cached details
  */
-export function mergeProcessWithDetails(
-  process: NuxtProcess,
-  details: ProcessDetails | undefined
-): NuxtProcess {
+export function mergeProcessWithDetails(process: NuxtProcess, details: ProcessDetails | undefined): NuxtProcess {
   if (!details) return process;
 
   return {

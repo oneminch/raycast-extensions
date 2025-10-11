@@ -4,11 +4,7 @@
 
 import { MenuBarExtra, Icon, launchCommand, LaunchType, showToast, Toast } from "@raycast/api";
 import type { NuxtProcess } from "../utils/process";
-import {
-  handleOpenBrowser,
-  handleStopServer,
-  handleOpenRepository,
-} from "../utils/actions";
+import { handleOpenBrowser, handleStopServer, handleOpenRepository } from "../utils/actions";
 
 interface ServerSubmenuProps {
   process: NuxtProcess;
@@ -69,17 +65,9 @@ export function ServerSubmenu({ process, projectName, revalidate }: ServerSubmen
       {/* Quick Create */}
       {cwd && (
         <MenuBarExtra.Section>
-          <MenuBarExtra.Item
-            title="Create Component"
-            icon={Icon.Box}
-            onAction={() => handleQuickCreate("component")}
-          />
+          <MenuBarExtra.Item title="Create Component" icon={Icon.Box} onAction={() => handleQuickCreate("component")} />
           <MenuBarExtra.Item title="Create Page" icon={Icon.Document} onAction={() => handleQuickCreate("page")} />
-          <MenuBarExtra.Item
-            title="Create API Route"
-            icon={Icon.Code}
-            onAction={() => handleQuickCreate("api")}
-          />
+          <MenuBarExtra.Item title="Create API Route" icon={Icon.Code} onAction={() => handleQuickCreate("api")} />
           <MenuBarExtra.Item
             title="Create Composable"
             icon={Icon.Wand}
