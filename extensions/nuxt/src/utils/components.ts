@@ -31,6 +31,7 @@ export const components = [
   "chatPrompt",
   "chatPromptSubmit",
   "checkbox",
+  "checkboxGroup",
   "chip",
   "collapsible",
   "colorModeAvatar",
