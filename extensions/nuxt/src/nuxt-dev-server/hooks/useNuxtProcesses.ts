@@ -3,7 +3,7 @@
  */
 
 import { useExec } from "@raycast/utils";
-import { useMemo, useEffect, useState } from "react";
+import { useMemo, useEffect, useState, useRef } from "react";
 import { PORT_RANGE, SHELL_COMMANDS } from "../constants/config";
 import { parseNuxtProcesses, collectProcessDetails } from "../utils/process";
 import type { NuxtProcess, ProcessDetails } from "../utils/process";
@@ -14,6 +14,7 @@ import type { NuxtProcess, ProcessDetails } from "../utils/process";
  */
 export function useNuxtProcesses() {
   const [processDetails, setProcessDetails] = useState<Map<string, ProcessDetails>>(new Map());
+  const prevPidsRef = useRef<string>("");
 
   // Check for Node processes listening on common Nuxt ports
   const {
@@ -32,6 +33,15 @@ export function useNuxtProcesses() {
 
   // Fetch project info for new processes (cached to prevent flickering)
   useEffect(() => {
+    const currentPids = nuxtProcesses.map((p) => p.pid).join(",");
+
+    // Only update if PIDs actually changed
+    if (currentPids === prevPidsRef.current) {
+      return;
+    }
+
+    prevPidsRef.current = currentPids;
+
     if (nuxtProcesses.length === 0) {
       if (processDetails.size > 0) {
         setProcessDetails(new Map());
@@ -77,7 +87,7 @@ export function useNuxtProcesses() {
     }
 
     setProcessDetails(newDetails);
-  }, [nuxtProcesses.map((p) => p.pid).join(",")]);
+  }, [nuxtProcesses, processDetails]);
 
   return {
     processes: nuxtProcesses,
