@@ -135,7 +135,6 @@
     "evals": "npx ray evals"
   },
   "platforms": [
-    "macOS",
-    "Windows"
+    "macOS"
   ]
 }

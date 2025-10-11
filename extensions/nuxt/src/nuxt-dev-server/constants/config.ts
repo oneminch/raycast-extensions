@@ -17,10 +17,11 @@ export const PORT_RANGE = {
 export const SHELL_COMMANDS = {
   /**
    * Find Node processes listening on ports in range
-   * Returns: PID PORT (e.g., "12345 localhost:3000")
+   * Returns: PID PORT (e.g., "12345 *:3000")
+   * Format: Column 2 = PID, Column 9 = NAME (address:port)
    */
   FIND_LISTENING_PORTS: (minPort: number, maxPort: number) =>
-    `lsof -i :${minPort}-${maxPort} -sTCP:LISTEN -n -P 2>/dev/null | grep -i node | awk '{print $2, $9}' || echo ""`,
+    `lsof -i :${minPort}-${maxPort} -sTCP:LISTEN -n -P 2>/dev/null | awk 'NR>1 && /node/ {print $2, $9}' || echo ""`,
 
   /**
    * Find Nuxt/Nitro processes

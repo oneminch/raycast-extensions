@@ -77,7 +77,7 @@ export function useNuxtProcesses() {
     }
 
     setProcessDetails(newDetails);
-  }, [nuxtProcesses.map((p) => p.pid).join(","), processDetails.size]);
+  }, [nuxtProcesses.map((p) => p.pid).join(",")]);
 
   return {
     processes: nuxtProcesses,

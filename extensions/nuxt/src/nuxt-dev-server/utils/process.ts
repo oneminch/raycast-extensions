@@ -30,8 +30,8 @@ export interface ProcessDetails {
 }
 
 /**
- * Parse lsof output to extract PID and port
- * Format: "PID ADDRESS" (e.g., "12345 localhost:3000")
+ * Parse lsof output line to extract PID and port
+ * Format: "PID ADDRESS" (e.g., "12345 *:3000" or "12345 localhost:3000")
  */
 export function parseLsofLine(line: string): { pid: string; port: string } | null {
   const parts = line.trim().split(/\s+/);
@@ -40,8 +40,8 @@ export function parseLsofLine(line: string): { pid: string; port: string } | nul
   const pid = parts[0];
   const address = parts[1];
 
-  // Extract port from address (format: *:3000 or localhost:3000)
-  const portMatch = address.match(/:(\d+)/);
+  // Extract port from address (format: *:3000 or localhost:3000 or [::]:3000)
+  const portMatch = address.match(/:(\d+)$/);
   if (!portMatch) return null;
 
   return { pid, port: portMatch[1] };

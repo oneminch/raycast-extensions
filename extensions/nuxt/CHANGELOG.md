@@ -29,7 +29,6 @@
 
 🚀 Improvements
 
-- **Platform**: Added Windows support
 - **Simplified**: Removed URL configuration preferences - now uses Nuxt UI v4 and Nuxt 4.x by default
 - **Refactored**: Extracted shared markdown fetching utilities for better code maintainability
 
