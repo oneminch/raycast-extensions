@@ -51,7 +51,7 @@ export default function QuickCreateCommand(props: LaunchProps<{ launchContext?: 
       });
 
       let filePath: string;
-      const projectPath = values.projectPath?.[0] || context?.projectPath!;
+      const projectPath = values.projectPath?.[0] || context?.projectPath || "";
 
       switch (values.type) {
         case "component":
