@@ -87,7 +87,7 @@ export function useNuxtProcesses() {
     }
 
     setProcessDetails(newDetails);
-  }, [nuxtProcesses, processDetails]);
+  }, [nuxtProcesses]);
 
   return {
     processes: nuxtProcesses,
